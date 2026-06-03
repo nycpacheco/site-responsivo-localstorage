@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/dashboard.css">
+<title>Dashboard</title>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- cabecalho -->
+    <header>
+        <h1>Bem vindo</h1>
+        <p>Site sobre o 1º semestre de ADS no IFSP</p>
+    </header>
+
+    <!-- Sobre e tals -->
+    <section class="about-section">
+
+    <h1>Sobre</h1>
+
+    <div class="about-grid">
+
+        <!-- if -->
+        <div class="card">
+
+            <h2>Oque é IFSP</h2>
+
+            <p>
+                O Instituto Federal de Educação, Ciência e Tecnologia
+                de São Paulo (IFSP) é uma instituição pública federal
+                voltada ao ensino, pesquisa e extensão. O IFSP oferece
+                cursos técnicos, tecnológicos e superiores em diversas
+                áreas do conhecimento, com foco na formação profissional,
+                científica e tecnológica de seus estudantes.
+            </p>
+
+            <button
+            onclick="window.open('https://www.ifsp.edu.br/')">
+                Site Oficial
+            </button>
+
+        </div>
+
+        <!-- ads -->
+        <div class="card">
+
+            <h2>Oque é ADS?</h2>
+
+            <p>
+                Análise e Desenvolvimento de Sistemas (ADS) é um curso
+                voltado ao desenvolvimento de softwares, sites e sistemas.
+                A formação envolve programação, banco de dados, lógica
+                computacional e tecnologias utilizadas no mercado de TI.
+            </p>
+
+            <button
+            onclick="window.open(
+'https://bra.ifsp.edu.br/documentos/category/49-tecnologia-em-analise-e-desenvolvimento-de-sistemas'
+            )">
+                Saiba mais
+            </button>
+
+        </div>
+
+        <!-- Como fiz site e gpt -->
+        <div class="card">
+
+            <h2>Sobre esse site</h2>
+
+            <p>
+                Este site foi desenvolvido como uma atividade acadêmica
+                utilizando HTML, CSS e JavaScript puro. Seguindo as
+                instruções propostas em aula, o projeto possui design
+                responsivo, armazenamento de dados com LocalStorage,
+                formulários interativos para cadastro e consulta de
+                usuários, sistema de contato, integração com mapas
+                reais utilizando Leaflet.js e páginas informativas sobre
+                o curso e a instituição. O site também utiliza
+                funções como map, filter e reduce para manipulação
+                e exibição dinâmica dos dados armazenados no navegador.
+            </p>
+
+            <p>
+                Durante o desenvolvimento do projeto, o ChatGPT foi
+                utilizado como ferramenta de apoio, auxiliando na
+                estruturação inicial do site e do código. A IA também
+                ajudou na implementação e explicação de funcionalidades
+                em JavaScript, incluindo LocalStorage, integração com
+                Leaflet.js e o sistema de consulta de usuários.
+                Além disso, foi utilizada para identificar erros no
+                código, sugerir melhorias e auxiliar na criação de
+                textos e descrições para tornar o site mais realista.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<!-- Projetos maneros -->
+
+<section class="projects-section">
+
+    <h2>Projetos em destaque</h2>
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card">
+
+            <img
+                src="img/project1.png"
+                alt="Project 1">
+
+            <h3>Jogo do gato (site)</h3>
+
+            <p>
+                Site responsivo desenvolvido com HTML, CSS e JavaScript.
+                O objetivo do jogo é descobrir qual número de 1 a 100
+                o gato escolheu utilizando apenas 6 tentativas.
+                (OBS: site possui som.)
+            </p>
+
+            <p class="tech">
+                HTML • CSS • JavaScript
+            </p>
+
+            <button
+            onclick="window.open('https://sitedeacertarnumeros.netlify.app/')">
+                Veja projeto
+            </button>
+
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+
+            <img
+                src="img/project2.png"
+                alt="Project 2">
+
+            <h3>Radar espacial em C</h3>
+
+            <p>
+                Sistema de radar espacial desenvolvido em Linguagem C.
+                O jogador deve escolher uma posição de pouso segura
+                dentro de um campo de asteroides representado por
+                uma matriz 5x5. O radar escaneia as regiões adjacentes
+                e analisa a densidade de asteroides para determinar
+                se o pouso é seguro ou perigoso.
+            </p>
+
+            <p class="tech">
+                C • Matrizes • Funções
+            </p>
+
+            <button
+            onclick="window.open('https://www.programiz.com/online-compiler/6F3WHkXJI9006')">
+                Veja codigo
+            </button>
+
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card">
+
+            <img
+                src="img/project3.png"
+                alt="Project 3">
+
+            <h3>Seleção de candidatos por Idade</h3>
+
+            <p>
+                Sistema desenvolvido em Portugol para análise
+                de candidatos em vagas de emprego. O programa
+                recebe o nome e idade dos participantes e
+                determina automaticamente quais vagas cada
+                pessoa pode ocupar com base em critérios
+                pré-definidos.
+            </p>
+
+            <p class="tech">
+                Portugol • Algoritmo • Logica
+            </p>
+
+            <button
+                onclick="window.open('https://portugol.dev/#share=baxn3db')">
+                    Veja codigo
+            </button>
+
+        </div>
+    </div>
+</section>
+
+    <!-- mapa -->
+    <section class="map-section">
+
+        <h2>Mapa</h2>
+        <div id="map"></div>
+
+    </section>
+
+    <!-- Outros if -->
+
+    <section class="places-section">
+
+        <h2>Unidades de ADS no IFSP</h2>
+
+        <div class="places-grid">
+
+            <div class="place-card">
+                
+                <h3>IFSP - Bragança Paulista</h3>
+
+                <p>
+                    Unidade onde o site foi desenvolvido.
+                </p>
+                <button
+                    onclick="window.open('https://bra.ifsp.edu.br/')">
+                        Saiba Mais
+                </button>
+            </div>
+
+            <div class="place-card">
+
+                <h3>Outras Unidades</h3>
+                
+                <p>
+                    Conheca as outras unidades de ADS
+                </p>
+
+                <button
+                    onclick="window.open('https://cursos.ifsp.edu.br/graduacao/')">
+                        Saiba Mais
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+
+<section class="contact-box">
+
+    <h2>Contato</h2>
+
+    <p>
+        Entre em contato com o ADS.
+    </p>
+
+    <input
+        type="text"
+        id="nomeMensagem"
+        placeholder="Seu nome">
+
+    <input
+        type="email"
+        id="emailMensagem"
+        placeholder="Seu email">
+    
+    <textarea
+        id="mensagem"
+        placeholder="Escreva sua mensagem">
+    </textarea>
+
+    <button onclick="enviarMensagem()">
+        Enviar Mensagem
+    </button>
+
+</section>
+
+    <!-- Botao usuario -->
+<section class="bottom-button">
+    <button
+    onclick="window.location.href='usuarios.html'">
+        Veja usuarios registrados
+    </button>
+</section>
+
+</div>
+<!-- mapa chato -->
+<link
+rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"
+/>
+
+<script
+src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+</html>

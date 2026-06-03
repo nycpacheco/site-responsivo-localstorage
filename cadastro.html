@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>Cadastro</title>
+</head>
+
+<body>
+
+<div class="left"></div>
+
+<div class="right">
+
+    <div class="login-box">
+
+        <div class="back"
+            onclick="window.location.href='index.html'">
+            ←
+        </div>
+
+        <div class="avatar">
+            <img src="img/avatar.png" alt="user">
+        </div>
+
+        <h2>Crie uma Conta</h2>
+
+        <p> Junte-se a nos hoje! É rapido e facil.</p>
+
+        <!-- email -->
+        <label>Email</label>
+
+        <div class="input-box">
+
+            <span class="icon">✉</span>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Entre com seu email">
+
+        </div>
+
+        <!-- username -->
+        <label>Username</label>
+
+        <div class="input-box">
+
+            <span class="icon">👤</span>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Escolha um username">
+
+        </div>
+
+        <!-- senha -->
+        <label>Senha</label>
+
+        <div class="input-box">
+
+            <span class="icon">🔒</span>
+
+            <input
+                type="password"
+                id="senha"
+                placeholder="Crie uma senha">
+
+            <span class="show-password"
+                onclick="mostrarSenha('senha')">
+            </span>
+
+        </div>
+
+        <!-- cadastro-->
+        <button class="login-btn"
+        onclick="cadastrar()">
+            Registre-se
+        </button>
+
+        <!-- linha maneira -->
+        <div class="divider-line">
+            <span>Ou registre-se com</span>
+        </div>
+
+        <!-- google nao funfa -->
+        <button class="social-btn">
+            Registre-se com Google
+            <img src="img/google.png" alt="Google">
+        </button>
+
+        <!-- suap nao funfa -->
+        <button class="social-btn">
+            Registre-se com Suap
+            <img src="img/suap.png" alt="Suap">
+        </button>
+
+        <!-- login -->
+        <button class="signup-btn"
+            onclick="window.location.href='index.html'">
+            Ja tem uma conta? Login
+        </button>
+
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

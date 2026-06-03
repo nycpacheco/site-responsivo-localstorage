@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+href="css/usuarios.css">
+<title>Usuários</title>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Painel de Usuarios</h1>
+
+        <p>Usuarios registrados e Mensagens</p>
+
+    </header>
+
+    <!-- dados -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+
+            <h2 id="totalUsuarios">0</h2>
+
+            <p>Total de usuarios</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 id="totalMensagens">0</h2>
+
+            <p>Total de Mensagens</p>
+
+        </div>
+
+    </section>
+
+    <!-- busca/pesquisa -->
+    <section class="search-box">
+
+        <input
+            type="text"
+            id="pesquisa"
+            placeholder="Procure por email ou username..."
+            onkeyup="filtrarUsuarios()">
+
+    </section>
+
+    <!-- USERS -->
+
+    <section class="usuarios-section">
+
+        <h2>Usuarios registrados</h2>
+
+        <div id="usuariosContainer"></div>
+
+    </section>
+
+    <!-- mensagens -->
+    <section class="mensagens-section">
+
+        <h2>Mensagens</h2>
+
+        <div id="mensagensContainer"></div>
+
+    </section>
+
+    <!-- botao voltar -->
+    <div class="bottom-button">
+
+        <button
+        onclick="window.location.href='aba.html'">
+        Voltar para o Dashboard
+        </button>
+
+    </div>
+
+</div>
+
+<!-- nao consigo mandar pro js.script ent fica aqui mesmo-->
+<script>
+
+/* pega usr */
+let usuarios = JSON.parse(
+    localStorage.getItem("usuarios")
+) || [];
+
+/* pega msg */
+let mensagens = JSON.parse(
+    localStorage.getItem("mensagens")
+) || [];
+
+/* quanto user (soma) */
+let totalUsuarios = usuarios.reduce(
+    (acc) => acc + 1,
+    0
+);
+
+document.getElementById(
+    "totalUsuarios"
+).innerText = totalUsuarios;
+
+/* quanta msg (soma) */
+let totalMensagens = mensagens.reduce(
+    (acc) => acc + 1,
+    0
+);
+
+document.getElementById(
+    "totalMensagens"
+).innerText = totalMensagens;
+
+/* mostra usuario */
+function mostrarUsuarios(lista) {
+
+    let container =
+    document.getElementById(
+        "usuariosContainer"
+    );
+
+    container.innerHTML = "";
+
+    lista.map(usuario => {
+
+        container.innerHTML += `
+
+        <div class="user-card">
+            <h3>${usuario.username}</h3>
+            <p>Email: ${usuario.email}</p>
+            <p>Password: ${usuario.senha}</p>
+        </div>
+
+        `;
+    });
+}
+
+/* mostra mensagem */
+function mostrarMensagens() {
+
+    let container =
+    document.getElementById(
+        "mensagensContainer"
+    );
+
+    container.innerHTML = "";
+
+    mensagens.map(msg => {
+
+        container.innerHTML += `
+
+        <div class="message-card">
+
+            <h3>${msg.nome}</h3>
+
+            <p>Email: ${msg.email}</p>
+
+            <p>${msg.mensagem}</p>
+
+        </div>
+
+        `;
+    });
+}
+
+/* filtro */
+function filtrarUsuarios() {
+
+    let valor =
+    document.getElementById(
+        "pesquisa"
+    ).value.toLowerCase();
+
+    let filtrados = usuarios.filter(usuario =>
+
+    usuario.email
+    .toLowerCase()
+    .includes(valor)
+
+    ||
+
+    usuario.username
+    .toLowerCase()
+    .includes(valor)
+);
+
+    mostrarUsuarios(filtrados);
+}
+
+/* inicializa func */
+mostrarUsuarios(usuarios);
+mostrarMensagens();
+
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
